@@ -22,3 +22,8 @@ sudo cp httpx2bbrf.go /usr/bin
 ```
 bbrf domains | httpx -json -silent | httpx2bbrf
 ```
+
+If you want to also add the server response:
+```
+bbrf domains | httpx -response-in-json -json -silent | httpx2bbrf
+```
