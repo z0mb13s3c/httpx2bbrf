@@ -21,6 +21,7 @@ func main() {
 		urlContentType := json["content-type"]
 		urlContentLength := json["content-length"]
 		urlStatusCode := json["status-code"]
+		urlServerResponse := json["serverResponse"]
 		
 		urlUrlString := fmt.Sprintf("%v", urlUrl)
 		urlTitleString := fmt.Sprintf("%v", urlTitle)
@@ -28,11 +29,12 @@ func main() {
 		urlContentTypeString := fmt.Sprintf("%v", urlContentType)
 		urlContentLengthString := fmt.Sprintf("%v", urlContentLength)
 		urlStatusCodeString := fmt.Sprintf("%v", urlStatusCode)
+		urlServerResponseString := fmt.Sprintf("%v", urlServerResponse)
 		
 		if urlUrlString != "<nil>" {
 			
-			fullCommand := "bbrf url add '" + urlUrlString +"' -t 'title:" + urlTitleString + "'" + " -t 'webserver:" + urlWebserverString + "'" + " -t 'contenttype:" + urlContentTypeString + "'" + " -t 'contentlength:" + urlContentLengthString + "'" + " -t 'statuscode:" + urlStatusCodeString + "'"
-			showOutput :=  "echo \"bbrf url add '" + urlUrlString +"' -t 'title:" + urlTitleString + "'" + " -t 'webserver:" + urlWebserverString + "'" + " -t 'contenttype:" + urlContentTypeString + "'" + " -t 'contentlength:" + urlContentLengthString + "'" + " -t 'statuscode:" + urlStatusCodeString + "'\""
+			fullCommand := "bbrf url add '" + urlUrlString +"' -t 'title:" + urlTitleString + "'" + " -t 'webserver:" + urlWebserverString + "'" + " -t 'contenttype:" + urlContentTypeString + "'" + " -t 'contentlength:" + urlContentLengthString + "'" + " -t 'statuscode:" + urlStatusCodeString + "'" + " -t 'serverresponse:" + urlServerResponseString + "'"
+			showOutput :=  "echo \"bbrf url add '" + urlUrlString +"' -t 'title:" + urlTitleString + "'" + " -t 'webserver:" + urlWebserverString + "'" + " -t 'contenttype:" + urlContentTypeString + "'" + " -t 'contentlength:" + urlContentLengthString + "'" + " -t 'statuscode:" + urlStatusCodeString + "'" + " -t 'serverresponse:" + urlServerResponseString + "'\""
 			out, _ :=exec.Command("sh","-c",fullCommand).Output()
 			out2, _ :=exec.Command("sh","-c",showOutput).Output()
 			fmt.Printf("%s", out)
