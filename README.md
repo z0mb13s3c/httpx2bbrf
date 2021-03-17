@@ -3,6 +3,8 @@
 Simple tool written in GOLANG to send the json output from [Project Discovery's HTTPX](https://github.com/projectdiscovery/httpx) tool to [Honoki's BBRF](
 https://github.com/honoki/bbrf-client).
 
+This tool comes with a warning. It's not by any way, shape or form the best code out there. I put it together out of need. If you want to improve it, feel free to do so.
+
 ## Prerequisites:
 
 - Both tools need to be installed (duh?)
