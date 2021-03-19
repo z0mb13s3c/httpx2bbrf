@@ -27,3 +27,9 @@ If you want to also add the server response:
 ```
 bbrf domains | httpx -response-in-json -json -silent | httpx2bbrf
 ```
+
+## If you wanna show some love:
+
+You can buy me a beer -> https://www.buymeacoffee.com/zombiesec
+
+PS. Here's **Free $100** with Digital Ocean -> https://m.do.co/c/13bf3068e7a9
