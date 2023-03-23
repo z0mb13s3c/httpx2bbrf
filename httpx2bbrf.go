@@ -18,10 +18,10 @@ func main() {
 		urlUrl := json["url"]	
 		urlTitle := json["title"]
 		urlWebserver := json["webserver"]
-		urlContentType := json["content-type"]
-		urlContentLength := json["content-length"]
-		urlStatusCode := json["status-code"]
-		urlServerResponse := json["serverResponse"]
+                urlContentType := json["content_type"]
+                urlContentLength := json["content_length"]
+                urlStatusCode := json["status_code"]
+                urlServerResponse := json["body"]
 		
 		urlUrlString := fmt.Sprintf("%v", urlUrl)
 		urlTitleString := fmt.Sprintf("%v", urlTitle)
