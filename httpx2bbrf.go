@@ -31,17 +31,14 @@ func main() {
 		urlStatusCodeString := fmt.Sprintf("%v", urlStatusCode)
 		urlServerResponseString := fmt.Sprintf("%v", urlServerResponse)
 		
-		if urlUrlString != "<nil>" {
-			
-			fullCommand := "bbrf url add '" + urlUrlString +"' -t 'title:" + urlTitleString + "'" + " -t 'webserver:" + urlWebserverString + "'" + " -t 'contenttype:" + urlContentTypeString + "'" + " -t 'contentlength:" + urlContentLengthString + "'" + " -t 'statuscode:" + urlStatusCodeString + "'" + " -t 'serverresponse:" + urlServerResponseString + "'"
-			showOutput :=  "echo \"bbrf url add '" + urlUrlString +"' -t 'title:" + urlTitleString + "'" + " -t 'webserver:" + urlWebserverString + "'" + " -t 'contenttype:" + urlContentTypeString + "'" + " -t 'contentlength:" + urlContentLengthString + "'" + " -t 'statuscode:" + urlStatusCodeString + "'" + " -t 'serverresponse:" + urlServerResponseString + "'\""
-			out, _ :=exec.Command("sh","-c",fullCommand).Output()
-			out2, _ :=exec.Command("sh","-c",showOutput).Output()
-			fmt.Printf("%s", out)
-			fmt.Printf("%s", out2)
+                if urlUrlString != "<nil>" {
 
-		} else {
-			break
-		}
-	}
+                        fullCommand := "bbrf url add '" + urlUrlString + " " + urlStatusCodeString + " " + urlContentLengthString + "' -t 'title:" + urlTitleString + "'" + " -t 'webserver:" + urlWebserverString + "'" + " -t 'contenttype:" + urlContentTypeString + "'" + " -t 'contentlength:" + urlContentLengthString + "'" + " -t 'statuscode:" + urlStatusCodeString + "'" + " -t 'serverresponse:" + urlServerResponseString + "'" + " -p @INFER"
+                        out, _ :=exec.Command("sh","-c",fullCommand).Output()
+                        fmt.Printf("%s", out)
+
+                } else {
+                        break
+                }
+        }
 }
