@@ -15,7 +15,7 @@ This tool comes with a warning. It's not by any way, shape or form the best code
 git clone https://github.com/z0mb13s3c/httpx2bbrf.git
 cd httpx2bbrf
 go build httpx2bbrf.go
-sudo cp httpx2bbrf.go /usr/bin
+sudo cp httpx2bbrf /usr/bin
 ```
 
 ## Usage:
@@ -25,7 +25,7 @@ bbrf domains | httpx -json -silent | httpx2bbrf
 
 If you want to also add the server response:
 ```
-bbrf domains | httpx -response-in-json -json -silent | httpx2bbrf
+bbrf domains | httpx -include-response -json -silent | httpx2bbrf
 ```
 
 ## If you wanna show some love:
